@@ -1,19 +1,14 @@
 package LJ::Light::Auth;
 
 use vars qw( $VERSION );
-
-require LJ::Light::ParseFlat;
 $VERSION = "0.04";
 
 require 5.008_008;
+require LJ::Light::ParseFlat;
 use warnings;
 use strict;
 use utf8;
 use Digest::MD5;
-
-use FindBin qw( $Bin );
-use lib $Bin;
-
 
 sub new {
     # Check for common user mistake
