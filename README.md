@@ -37,10 +37,12 @@
         my $challenge_auth_response = $lj_client->auth->challenge; # hashref
         my $session_auth_response = $lj_client->auth->session; # scalar
 
-    This method returns a requested auth information.
-     my $auth\_challenge = $challenge\_auth\_response->{challenge};
-     my $auth\_response = $challenge\_auth\_response->{auth\_response};
-     my $ljsession = $session\_auth\_response;
+    This method returns a requested auth information: auth challenge and auth response
+    if select "challenge" or value of auth cookie if if select "session".
+
+        my $auth_challenge = $challenge_auth_response->{challenge};
+        my $auth_response = $challenge_auth_response->{auth_response};
+        my $ljsession = $session_auth_response;
 
 - get\_userinfo
 
@@ -56,9 +58,10 @@
         my $user_info = $lj_client->get_userinfo( $username, \@infos ); # hashref
 
     This method returns a reference to a hash with requested user information.
-     $user\_info->{id}; # scalar
-     $user\_info->{friends}; # arrayref
-     $user\_info->{friendof}; # arrayref
+
+        $user_info->{id}; # scalar
+        $user_info->{friends}; # arrayref
+        $user_info->{friendof}; # arrayref
 
 - events
 
