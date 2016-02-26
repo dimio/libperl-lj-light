@@ -1,6 +1,13 @@
 # NAME
 
-    LJ::Light
+    LJ::Light - primitive perl module for access Live Journal flat API.
+
+# DESCRIPTION
+
+    The C<LJ::Light> is a class implementing for Livejorunal flat API client.
+    In normal use the application creates an C<LJ::Light> object, and then configures it with values for
+    default UserAgent (via C<LWP::UserAgent>), url to LJ flat interface, etc. 
+    There are methods for: authorisation, getting user info, search user posts in specified journals.
 
 # SYNOPSIS
 
@@ -38,7 +45,7 @@
         my $session_auth_response = $lj_client->auth->session; # scalar
 
     This method returns a requested auth information: auth challenge and auth response
-    if select "challenge" or value of auth cookie if if select "session".
+    if select "challenge" or value of auth cookie if select "session".
 
         my $auth_challenge = $challenge_auth_response->{challenge};
         my $auth_response = $challenge_auth_response->{auth_response};

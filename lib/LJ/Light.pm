@@ -1,7 +1,14 @@
 
 =head1 NAME
 
- LJ::Light
+ LJ::Light - primitive perl module for access Live Journal flat API.
+
+=head1 DESCRIPTION
+
+ The C<LJ::Light> is a class implementing for Livejorunal flat API client.
+ In normal use the application creates an C<LJ::Light> object, and then configures it with values for
+ default UserAgent (via C<LWP::UserAgent>), url to LJ flat interface, etc. 
+ There are methods for: authorisation, getting user info, search user posts in specified journals.
 
 =head1 SYNOPSIS
 
@@ -85,7 +92,7 @@ sub new {
  my $session_auth_response = $lj_client->auth->session; # scalar
 
 This method returns a requested auth information: auth challenge and auth response
-if select "challenge" or value of auth cookie if if select "session".
+if select "challenge" or value of auth cookie if select "session".
 
  my $auth_challenge = $challenge_auth_response->{challenge};
  my $auth_response = $challenge_auth_response->{auth_response};
@@ -98,14 +105,14 @@ sub auth {
 
     return $self->{auth} if $self->{auth};
 
-	my $auth = LJ::Light::Auth->new(
-    	ua    => $self->{ua},
-    	url   => $self->{flat_url},
-    	login => $self->{login},
-    	pass  => $self->{pass},
-    	hpass => $self->{hpass},
+    my $auth = LJ::Light::Auth->new(
+        ua    => $self->{ua},
+        url   => $self->{flat_url},
+        login => $self->{login},
+        pass  => $self->{pass},
+        hpass => $self->{hpass},
     );
-	return $self->{auth} = $auth;    
+    return $self->{auth} = $auth;
 }
 
 =item get_userinfo
@@ -137,7 +144,7 @@ sub get_userinfo {
     my $user_info = {};
 
     $self->{userinfo} = LJ::Light::UserInfo->new( ua => $self->{ua}, )
-    	if !$self->{userinfo};
+        if !$self->{userinfo};
 
     foreach my $info (@$infos) {
         chomp $info;
@@ -150,13 +157,14 @@ sub get_userinfo {
             );
         }
         elsif ( $info eq 'friends' ) {
-        	my @dummy;
-        	$user_info->{$info} = \@dummy;
+            my @dummy;
+            $user_info->{$info} = \@dummy;
         }
         elsif ( $info eq 'friendof' ) {
-        	my @dummy;
-        	$user_info->{$info} = \@dummy;
+            my @dummy;
+            $user_info->{$info} = \@dummy;
         }
+
         # mutual, no mutual: get $self->{userinfo}->friends, ftiendof (if it is not exist)
         # and generate @mutual/@no_mutual
         else { warn "You must specified params to get_userinfo!" }
@@ -185,12 +193,12 @@ sub events {
 
     return $self->{events} if $self->{events};
 
-	my $events = LJ::Light::Events->new(
-    	ua    => $self->{ua},
-    	url   => $self->{flat_url},
-    	login => $self->{login},
+    my $events = LJ::Light::Events->new(
+        ua    => $self->{ua},
+        url   => $self->{flat_url},
+        login => $self->{login},
     );
-	return $self->{events} = $events;    
+    return $self->{events} = $events;
 }
 
 1;
