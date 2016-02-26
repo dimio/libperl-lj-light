@@ -33,6 +33,9 @@ sub new {
 }
 
 sub session {
+	# need: add to $self->{ua} default headers:
+	# X-LJ-Auth: cookie
+	# Cookie: ljsession=$response_parsed->{ljsession}
 	my $self	= shift;
 	my $auth	= $self->challenge;
 

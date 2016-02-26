@@ -20,7 +20,8 @@ sub parse_flatresponse {
     my $resp_content = shift;
 
     my $resp_parsed = {};
-    # my %$resp_parsed	= split(/\n/, $resp_content);
+
+    # my %$resp_parsed  = split(/\n/, $resp_content);
 
     my @resp_content = split( /\n/, $resp_content );
     my $index = 0;
