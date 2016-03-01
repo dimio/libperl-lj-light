@@ -104,7 +104,9 @@
 
 # SEE ALSO
 
-- Live Journal flat server protocol
+- Live Journal flat server protocol:
  http://www.livejournal.com/doc/server/ljp.csp.flat.protocol.html
-- Live Journal source archive
+- Live Journal source archive:
  https://github.com/apparentlymart/livejournal
+- More Live Journal services:
+ http://dimio.org/lj-tools

@@ -229,11 +229,14 @@ sub events {
 
 =over
 
-=item Live Journal flat server protocol
+=item Live Journal flat server protocol:
  http://www.livejournal.com/doc/server/ljp.csp.flat.protocol.html
 
-=item Live Journal source archive
+=item Live Journal source archive:
  https://github.com/apparentlymart/livejournal
+
+=item More Live Journal services:
+ http://dimio.org/lj-tools
 
 =back
 
