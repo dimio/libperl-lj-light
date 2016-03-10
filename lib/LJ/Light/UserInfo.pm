@@ -52,6 +52,8 @@ sub _get_userid_www {
 	my $url			= shift;
 	my $username	= shift;
 
+	$username =~ s/-/_/g;
+
 	my $response = $ua->get( 
 		$url . $username,
 	);
