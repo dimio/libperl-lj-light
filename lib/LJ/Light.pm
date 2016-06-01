@@ -30,7 +30,7 @@
 package LJ::Light;
 
 use vars qw( $VERSION );
-$VERSION = "0.05";
+$VERSION = '0.1.1';
 
 require 5.008_008;
 use warnings;
@@ -241,6 +241,9 @@ sub events {
 = item Another LJ modules:
  https://metacpan.org/pod/WebService::LiveJournal
  https://metacpan.org/pod/LJ::GetCookieSession
+
+= item Semantic Versioning guide:
+ http://semver.org/
 
 =back
 

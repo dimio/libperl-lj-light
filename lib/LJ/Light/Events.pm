@@ -1,7 +1,7 @@
 package LJ::Light::Events;
 
 use vars qw( $VERSION );
-$VERSION = "0.04";
+$VERSION = '0.1.0';
 
 require 5.008_008;
 require LJ::Light::ParseFlat;

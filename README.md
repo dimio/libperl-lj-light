@@ -110,3 +110,10 @@
  https://github.com/apparentlymart/livejournal
 - More Live Journal services:
  http://dimio.org/lj-tools
+
+    &#x3d; item Another LJ modules:
+     https://metacpan.org/pod/WebService::LiveJournal
+     https://metacpan.org/pod/LJ::GetCookieSession
+
+    &#x3d; item Semantic Versioning guide:
+     http://semver.org/
