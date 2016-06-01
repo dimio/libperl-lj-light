@@ -238,11 +238,11 @@ sub events {
 =item More Live Journal services:
  http://dimio.org/lj-tools
 
-= item Another LJ modules:
+=item Another LJ modules:
  https://metacpan.org/pod/WebService::LiveJournal
  https://metacpan.org/pod/LJ::GetCookieSession
 
-= item Semantic Versioning guide:
+=item Semantic Versioning guide:
  http://semver.org/
 
 =back
