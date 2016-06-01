@@ -4,9 +4,9 @@
 
 # DESCRIPTION
 
-    The `LJ::Light` is a class implementing for Livejorunal flat API client.
-    In normal use the application creates an `LJ::Light` object, and then configures it with values for
-    default UserAgent (via `LWP::UserAgent`), url to LJ flat interface, etc. 
+    The C<LJ::Light> is a class implementing for Livejorunal flat API client.
+    In normal use the application creates an C<LJ::Light> object, and then configures it with values for
+    default UserAgent (via C<LWP::UserAgent>), url to LJ flat interface, etc. 
     There are methods for: authorisation, getting user info, search user posts in specified journals.
 
 # SYNOPSIS
@@ -111,7 +111,7 @@
 - More Live Journal services:
  http://dimio.org/lj-tools
 - Another LJ modules:
- https://metacpan.org/pod/WebService::LiveJournal
- https://metacpan.org/pod/LJ::GetCookieSession
+    - https://metacpan.org/pod/WebService::LiveJournal
+    - https://metacpan.org/pod/LJ::GetCookieSession
 - Semantic Versioning guide:
  http://semver.org/

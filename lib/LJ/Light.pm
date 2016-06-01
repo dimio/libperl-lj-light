@@ -239,8 +239,14 @@ sub events {
  http://dimio.org/lj-tools
 
 =item Another LJ modules:
- https://metacpan.org/pod/WebService::LiveJournal
- https://metacpan.org/pod/LJ::GetCookieSession
+
+=over
+
+=item https://metacpan.org/pod/WebService::LiveJournal
+
+=item https://metacpan.org/pod/LJ::GetCookieSession
+
+=back
 
 =item Semantic Versioning guide:
  http://semver.org/
